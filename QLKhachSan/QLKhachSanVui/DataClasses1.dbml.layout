@@ -65,13 +65,13 @@
         <classShapeMoniker Id="584588df-f4c7-4fd5-8086-1be5163bde39" />
       </nodes>
     </associationConnector>
-    <classShape Id="f545ebb5-982a-4594-8fb2-3cc1f2f10049" absoluteBounds="0.625, 0.5, 2, 1.7708968098958331">
+    <classShape Id="f545ebb5-982a-4594-8fb2-3cc1f2f10049" absoluteBounds="0.5, 0.5, 2, 1.7708968098958331">
       <DataClassMoniker Name="/DataClasses1DataContext/phieuthuephong" />
       <nestedChildShapes>
-        <elementListCompartment Id="70f92083-2ae9-4145-9bdf-c53fdf9c9cc2" absoluteBounds="0.64000000000000012, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="70f92083-2ae9-4145-9bdf-c53fdf9c9cc2" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(7.5 : 1); (7.5 : 0.625); (2.625 : 0.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(7.5 : 1); (7.5 : 0.625); (2.5 : 0.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DataClasses1DataContext/khachhang/khachhang_phieuthuephong" />
       <nodes>
         <classShapeMoniker Id="8b04e804-9885-4cce-92b5-6ed4bb13c31e" />

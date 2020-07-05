@@ -13,6 +13,7 @@ create table khachhang(
 	ghichu varchar(50),
 	primary key (makh)
 )
+select * from PhieuThuePHong
 go
 create table loaiphong(
 	maloai varchar(50),
