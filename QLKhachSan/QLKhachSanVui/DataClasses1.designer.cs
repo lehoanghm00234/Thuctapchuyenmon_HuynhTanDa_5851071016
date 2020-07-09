@@ -282,6 +282,27 @@ namespace QLKhachSanVui
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), matp, maphong, makh, ngaythue, soluong);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.suaNguoidung")]
+		public int suaNguoidung([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string taikhoan, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string matkhau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string chucvu)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), taikhoan, matkhau, chucvu);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.themNguoidung")]
+		public int themNguoidung([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string taikhoan, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string matkhau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string chucvu)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), taikhoan, matkhau, chucvu);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.xoaNguoidung")]
+		public int xoaNguoidung([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string taikhoan)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), taikhoan);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.chucvu")]

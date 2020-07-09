@@ -1,4 +1,4 @@
-use Quanlykhachsan2
+﻿use Quanlykhachsan2
 go
 
 create proc themkh(
@@ -316,3 +316,41 @@ delete chucvu where machucvu = @machuvu
 end
 
 --Hello word test github
+
+
+--Thêm người dùng
+go
+create proc themNguoidung(
+	@taikhoan varchar(50),
+	@matkhau varchar(50),
+	@chucvu varchar(50)
+)
+as begin
+insert into nguoidung values (
+	@taikhoan,
+	@matkhau,
+	@chucvu
+)
+end
+--Sửa người dùng
+go
+create proc suaNguoidung(
+	@taikhoan varchar(50),
+	@matkhau varchar(50),
+	@chucvu varchar(50)
+)
+as begin
+update nguoidung set
+	matkhau = @matkhau,
+	chucvu = @chucvu where taikhoan = @taikhoan
+	end
+
+--Xoa nguoi dung
+go
+create proc xoaNguoidung(
+	@taikhoan varchar(50)
+)
+as begin
+delete nguoidung where taikhoan = @taikhoan
+end
+--Test github

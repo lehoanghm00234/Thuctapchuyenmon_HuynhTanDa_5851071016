@@ -199,4 +199,20 @@
     <Parameter Name="soluong" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.suaNguoidung" Method="suaNguoidung">
+    <Parameter Name="taikhoan" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="matkhau" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="chucvu" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.themNguoidung" Method="themNguoidung">
+    <Parameter Name="taikhoan" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="matkhau" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="chucvu" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.xoaNguoidung" Method="xoaNguoidung">
+    <Parameter Name="taikhoan" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>
