@@ -10,6 +10,8 @@ Nội dung đã làm được:
     - Lập được hóa đơn cho khách hàng khi trả phòng, tính tiền.
     - Lập phiếu đặt phòng cho khách hàng.
     - Có bảng loại phòng, quản lý loại phòng, giá từng loại phòng.
+    
+    
 Dự định làm thêm: 
 1. Phân quyền đăng nhập.
 2. Xuất file excel báo cáo.
