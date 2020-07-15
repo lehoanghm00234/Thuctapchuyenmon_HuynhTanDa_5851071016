@@ -23,9 +23,7 @@ namespace QLKhachSanVui
         {
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dt.nguoidungs.ToList();
-            cbChucvu.DataSource = dt.chucvus.ToList();
-            cbChucvu.DisplayMember = "tenchucvu";
-            cbChucvu.ValueMember = "tenchucvu";
+          
         }
         private void LoadDataUser()
         {
@@ -34,7 +32,7 @@ namespace QLKhachSanVui
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            dt.themNguoidung(txtTaikhoan.Text, txtMatkhau.Text, cbChucvu.SelectedValue.ToString());
+            dt.themNguoidung(txtTaikhoan.Text, txtMatkhau.Text, txtQuye.Text);
             FormNguoiDung_Load(sender, e);
         }
 
@@ -46,7 +44,7 @@ namespace QLKhachSanVui
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            dt.suaNguoidung(txtTaikhoan.Text, txtMatkhau.Text, cbChucvu.SelectedValue.ToString());
+            dt.suaNguoidung(txtTaikhoan.Text, txtMatkhau.Text, txtQuye.Text);
             dataGridView1.DataSource = new DataClasses1DataContext().nguoidungs.ToList();
         }
 
@@ -55,7 +53,7 @@ namespace QLKhachSanVui
             int i = dataGridView1.CurrentRow.Index;
             txtTaikhoan.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             txtMatkhau.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            cbChucvu.SelectedValue = dataGridView1.Rows[i].Cells[2].Value.ToString();
+           // cbChucvu.SelectedValue = dataGridView1.Rows[i].Cells[2].Value.ToString();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

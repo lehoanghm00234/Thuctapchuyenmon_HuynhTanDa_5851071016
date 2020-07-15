@@ -92,14 +92,21 @@ add   machucvu nvarchar(50);
 
 alter table nhanvien
 add  tongluong nvarchar(50)
+
+go
 create table hoadon (
-	mahd varchar(50),	
+	mahd varchar(50),
+	maphieuthue varchar(50),
+	ngaythuephong varchar(50),
+	Gia varchar(50),
+	Soluongngaythue varchar(50),
 	ngaythanhtoan varchar(50),
 	tongtien varchar(50),
-	phieuthue varchar(50),
-	matp varchar(50),
+	
+	
 	makh varchar(50),
 	manv varchar(50),
+	
 	primary key (mahd),
 	foreign key (manv) references nhanvien(manv)
 

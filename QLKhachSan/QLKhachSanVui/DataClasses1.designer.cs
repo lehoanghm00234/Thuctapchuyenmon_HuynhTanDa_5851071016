@@ -54,6 +54,9 @@ namespace QLKhachSanVui
     partial void Insertphieuthuephong(phieuthuephong instance);
     partial void Updatephieuthuephong(phieuthuephong instance);
     partial void Deletephieuthuephong(phieuthuephong instance);
+    partial void Inserthoadon(hoadon instance);
+    partial void Updatehoadon(hoadon instance);
+    partial void Deletehoadon(hoadon instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -147,6 +150,14 @@ namespace QLKhachSanVui
 			get
 			{
 				return this.GetTable<phieuthuephong>();
+			}
+		}
+		
+		public System.Data.Linq.Table<hoadon> hoadons
+		{
+			get
+			{
+				return this.GetTable<hoadon>();
 			}
 		}
 		
@@ -301,6 +312,27 @@ namespace QLKhachSanVui
 		public int xoaNguoidung([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string taikhoan)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), taikhoan);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.themHoaDon")]
+		public int themHoaDon([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string mahd, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string maphieuthue, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string ngaythuephong, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Gia", DbType="VarChar(50)")] string gia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Soluongngaythue", DbType="VarChar(50)")] string soluongngaythue, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string ngaythanhtoan, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string tongtien, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string makh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string manv)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahd, maphieuthue, ngaythuephong, gia, soluongngaythue, ngaythanhtoan, tongtien, makh, manv);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.suaHoaDon")]
+		public int suaHoaDon([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string mahd, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string maphieuthue, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string ngaythuephong, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Gia", DbType="VarChar(50)")] string gia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Soluongngaythue", DbType="VarChar(50)")] string soluongngaythue, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string ngaythanhtoan, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string tongtien, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string makh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string manv)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahd, maphieuthue, ngaythuephong, gia, soluongngaythue, ngaythanhtoan, tongtien, makh, manv);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.xoaHoaDon")]
+		public int xoaHoaDon([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string mahd)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mahd);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -1279,6 +1311,8 @@ namespace QLKhachSanVui
 		
 		private string _tongluong;
 		
+		private EntitySet<hoadon> _hoadons;
+		
 		private EntityRef<chucvu> _chucvu;
 		
     #region Extensibility Method Definitions
@@ -1307,6 +1341,7 @@ namespace QLKhachSanVui
 		
 		public nhanvien()
 		{
+			this._hoadons = new EntitySet<hoadon>(new Action<hoadon>(this.attach_hoadons), new Action<hoadon>(this.detach_hoadons));
 			this._chucvu = default(EntityRef<chucvu>);
 			OnCreated();
 		}
@@ -1495,6 +1530,19 @@ namespace QLKhachSanVui
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="nhanvien_hoadon", Storage="_hoadons", ThisKey="manv", OtherKey="manv")]
+		public EntitySet<hoadon> hoadons
+		{
+			get
+			{
+				return this._hoadons;
+			}
+			set
+			{
+				this._hoadons.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="chucvu_nhanvien", Storage="_chucvu", ThisKey="machucvu", OtherKey="machucvu", IsForeignKey=true)]
 		public chucvu chucvu
 		{
@@ -1548,6 +1596,18 @@ namespace QLKhachSanVui
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
+		
+		private void attach_hoadons(hoadon entity)
+		{
+			this.SendPropertyChanging();
+			entity.nhanvien = this;
+		}
+		
+		private void detach_hoadons(hoadon entity)
+		{
+			this.SendPropertyChanging();
+			entity.nhanvien = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.phieuthuephong")]
@@ -1565,6 +1625,8 @@ namespace QLKhachSanVui
 		private string _ngaythue;
 		
 		private string _soluong;
+		
+		private EntitySet<hoadon> _hoadons;
 		
 		private EntityRef<khachhang> _khachhang;
 		
@@ -1586,6 +1648,7 @@ namespace QLKhachSanVui
 		
 		public phieuthuephong()
 		{
+			this._hoadons = new EntitySet<hoadon>(new Action<hoadon>(this.attach_hoadons), new Action<hoadon>(this.detach_hoadons));
 			this._khachhang = default(EntityRef<khachhang>);
 			OnCreated();
 		}
@@ -1694,6 +1757,19 @@ namespace QLKhachSanVui
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="phieuthuephong_hoadon", Storage="_hoadons", ThisKey="matp", OtherKey="maphieuthue")]
+		public EntitySet<hoadon> hoadons
+		{
+			get
+			{
+				return this._hoadons;
+			}
+			set
+			{
+				this._hoadons.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="khachhang_phieuthuephong", Storage="_khachhang", ThisKey="makh", OtherKey="makh", IsForeignKey=true)]
 		public khachhang khachhang
 		{
@@ -1724,6 +1800,354 @@ namespace QLKhachSanVui
 						this._makh = default(string);
 					}
 					this.SendPropertyChanged("khachhang");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_hoadons(hoadon entity)
+		{
+			this.SendPropertyChanging();
+			entity.phieuthuephong = this;
+		}
+		
+		private void detach_hoadons(hoadon entity)
+		{
+			this.SendPropertyChanging();
+			entity.phieuthuephong = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.hoadon")]
+	public partial class hoadon : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _mahd;
+		
+		private string _maphieuthue;
+		
+		private string _ngaythuephong;
+		
+		private string _Gia;
+		
+		private string _Soluongngaythue;
+		
+		private string _ngaythanhtoan;
+		
+		private string _tongtien;
+		
+		private string _makh;
+		
+		private string _manv;
+		
+		private EntityRef<nhanvien> _nhanvien;
+		
+		private EntityRef<phieuthuephong> _phieuthuephong;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnmahdChanging(string value);
+    partial void OnmahdChanged();
+    partial void OnmaphieuthueChanging(string value);
+    partial void OnmaphieuthueChanged();
+    partial void OnngaythuephongChanging(string value);
+    partial void OnngaythuephongChanged();
+    partial void OnGiaChanging(string value);
+    partial void OnGiaChanged();
+    partial void OnSoluongngaythueChanging(string value);
+    partial void OnSoluongngaythueChanged();
+    partial void OnngaythanhtoanChanging(string value);
+    partial void OnngaythanhtoanChanged();
+    partial void OntongtienChanging(string value);
+    partial void OntongtienChanged();
+    partial void OnmakhChanging(string value);
+    partial void OnmakhChanged();
+    partial void OnmanvChanging(string value);
+    partial void OnmanvChanged();
+    #endregion
+		
+		public hoadon()
+		{
+			this._nhanvien = default(EntityRef<nhanvien>);
+			this._phieuthuephong = default(EntityRef<phieuthuephong>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mahd", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string mahd
+		{
+			get
+			{
+				return this._mahd;
+			}
+			set
+			{
+				if ((this._mahd != value))
+				{
+					this.OnmahdChanging(value);
+					this.SendPropertyChanging();
+					this._mahd = value;
+					this.SendPropertyChanged("mahd");
+					this.OnmahdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maphieuthue", DbType="VarChar(50)")]
+		public string maphieuthue
+		{
+			get
+			{
+				return this._maphieuthue;
+			}
+			set
+			{
+				if ((this._maphieuthue != value))
+				{
+					if (this._phieuthuephong.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnmaphieuthueChanging(value);
+					this.SendPropertyChanging();
+					this._maphieuthue = value;
+					this.SendPropertyChanged("maphieuthue");
+					this.OnmaphieuthueChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngaythuephong", DbType="VarChar(50)")]
+		public string ngaythuephong
+		{
+			get
+			{
+				return this._ngaythuephong;
+			}
+			set
+			{
+				if ((this._ngaythuephong != value))
+				{
+					this.OnngaythuephongChanging(value);
+					this.SendPropertyChanging();
+					this._ngaythuephong = value;
+					this.SendPropertyChanged("ngaythuephong");
+					this.OnngaythuephongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gia", DbType="VarChar(50)")]
+		public string Gia
+		{
+			get
+			{
+				return this._Gia;
+			}
+			set
+			{
+				if ((this._Gia != value))
+				{
+					this.OnGiaChanging(value);
+					this.SendPropertyChanging();
+					this._Gia = value;
+					this.SendPropertyChanged("Gia");
+					this.OnGiaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Soluongngaythue", DbType="VarChar(50)")]
+		public string Soluongngaythue
+		{
+			get
+			{
+				return this._Soluongngaythue;
+			}
+			set
+			{
+				if ((this._Soluongngaythue != value))
+				{
+					this.OnSoluongngaythueChanging(value);
+					this.SendPropertyChanging();
+					this._Soluongngaythue = value;
+					this.SendPropertyChanged("Soluongngaythue");
+					this.OnSoluongngaythueChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngaythanhtoan", DbType="VarChar(50)")]
+		public string ngaythanhtoan
+		{
+			get
+			{
+				return this._ngaythanhtoan;
+			}
+			set
+			{
+				if ((this._ngaythanhtoan != value))
+				{
+					this.OnngaythanhtoanChanging(value);
+					this.SendPropertyChanging();
+					this._ngaythanhtoan = value;
+					this.SendPropertyChanged("ngaythanhtoan");
+					this.OnngaythanhtoanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tongtien", DbType="VarChar(50)")]
+		public string tongtien
+		{
+			get
+			{
+				return this._tongtien;
+			}
+			set
+			{
+				if ((this._tongtien != value))
+				{
+					this.OntongtienChanging(value);
+					this.SendPropertyChanging();
+					this._tongtien = value;
+					this.SendPropertyChanged("tongtien");
+					this.OntongtienChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_makh", DbType="VarChar(50)")]
+		public string makh
+		{
+			get
+			{
+				return this._makh;
+			}
+			set
+			{
+				if ((this._makh != value))
+				{
+					this.OnmakhChanging(value);
+					this.SendPropertyChanging();
+					this._makh = value;
+					this.SendPropertyChanged("makh");
+					this.OnmakhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manv", DbType="VarChar(50)")]
+		public string manv
+		{
+			get
+			{
+				return this._manv;
+			}
+			set
+			{
+				if ((this._manv != value))
+				{
+					if (this._nhanvien.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnmanvChanging(value);
+					this.SendPropertyChanging();
+					this._manv = value;
+					this.SendPropertyChanged("manv");
+					this.OnmanvChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="nhanvien_hoadon", Storage="_nhanvien", ThisKey="manv", OtherKey="manv", IsForeignKey=true)]
+		public nhanvien nhanvien
+		{
+			get
+			{
+				return this._nhanvien.Entity;
+			}
+			set
+			{
+				nhanvien previousValue = this._nhanvien.Entity;
+				if (((previousValue != value) 
+							|| (this._nhanvien.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._nhanvien.Entity = null;
+						previousValue.hoadons.Remove(this);
+					}
+					this._nhanvien.Entity = value;
+					if ((value != null))
+					{
+						value.hoadons.Add(this);
+						this._manv = value.manv;
+					}
+					else
+					{
+						this._manv = default(string);
+					}
+					this.SendPropertyChanged("nhanvien");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="phieuthuephong_hoadon", Storage="_phieuthuephong", ThisKey="maphieuthue", OtherKey="matp", IsForeignKey=true)]
+		public phieuthuephong phieuthuephong
+		{
+			get
+			{
+				return this._phieuthuephong.Entity;
+			}
+			set
+			{
+				phieuthuephong previousValue = this._phieuthuephong.Entity;
+				if (((previousValue != value) 
+							|| (this._phieuthuephong.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._phieuthuephong.Entity = null;
+						previousValue.hoadons.Remove(this);
+					}
+					this._phieuthuephong.Entity = value;
+					if ((value != null))
+					{
+						value.hoadons.Add(this);
+						this._maphieuthue = value.matp;
+					}
+					else
+					{
+						this._maphieuthue = default(string);
+					}
+					this.SendPropertyChanged("phieuthuephong");
 				}
 			}
 		}

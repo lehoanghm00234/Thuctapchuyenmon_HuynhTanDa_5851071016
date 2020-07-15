@@ -63,6 +63,7 @@
       <Column Name="luong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="machucvu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="tongluong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="nhanvien_hoadon" Member="hoadons" ThisKey="manv" OtherKey="manv" Type="hoadon" />
       <Association Name="chucvu_nhanvien" Member="chucvu" ThisKey="machucvu" OtherKey="machucvu" Type="chucvu" IsForeignKey="true" />
     </Type>
   </Table>
@@ -73,7 +74,23 @@
       <Column Name="makh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="ngaythue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="soluong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="phieuthuephong_hoadon" Member="hoadons" ThisKey="matp" OtherKey="maphieuthue" Type="hoadon" />
       <Association Name="khachhang_phieuthuephong" Member="khachhang" ThisKey="makh" OtherKey="makh" Type="khachhang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hoadon" Member="hoadons">
+    <Type Name="hoadon">
+      <Column Name="mahd" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="maphieuthue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ngaythuephong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Soluongngaythue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ngaythanhtoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tongtien" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="makh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="manv" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="nhanvien_hoadon" Member="nhanvien" ThisKey="manv" OtherKey="manv" Type="nhanvien" IsForeignKey="true" />
+      <Association Name="phieuthuephong_hoadon" Member="phieuthuephong" ThisKey="maphieuthue" OtherKey="matp" Type="phieuthuephong" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.themkh" Method="themkh">
@@ -213,6 +230,34 @@
   </Function>
   <Function Name="dbo.xoaNguoidung" Method="xoaNguoidung">
     <Parameter Name="taikhoan" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.themHoaDon" Method="themHoaDon">
+    <Parameter Name="mahd" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="maphieuthue" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ngaythuephong" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Gia" Parameter="gia" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Soluongngaythue" Parameter="soluongngaythue" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ngaythanhtoan" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tongtien" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="makh" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="manv" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.suaHoaDon" Method="suaHoaDon">
+    <Parameter Name="mahd" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="maphieuthue" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ngaythuephong" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Gia" Parameter="gia" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Soluongngaythue" Parameter="soluongngaythue" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ngaythanhtoan" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tongtien" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="makh" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="manv" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.xoaHoaDon" Method="xoaHoaDon">
+    <Parameter Name="mahd" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

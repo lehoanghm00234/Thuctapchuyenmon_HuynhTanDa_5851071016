@@ -129,9 +129,9 @@ E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debu
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.FormMain.resources
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.FormNguoiDung.resources
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.FormPhong.resources
-E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.FormThuePhong.resources
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.FormLogin.vi.resources
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.csproj.GenerateResource.cache
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\vi\QLKhachSanVui.resources.dll
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.exe
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.pdb
+E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.FormHoaDon.resources

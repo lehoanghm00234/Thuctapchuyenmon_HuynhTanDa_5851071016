@@ -13,13 +13,14 @@ namespace QLKhachSanVui
 {
     public partial class FormLogin : Form
     {
-        public FormMain frmMain;
-        String fullname="";
+        //public FormMain frmMain;
+        //String fullname="";
 
         public FormLogin()
         {
             InitializeComponent();
         }
+        DataClasses1DataContext dt = new DataClasses1DataContext();
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
@@ -41,11 +42,35 @@ namespace QLKhachSanVui
             
             return false;
         }
+        public int i;
+        public bool check()
+        {
+            nguoidung nguoidung = dt.nguoidungs.Where(s => s.taikhoan == txttenDangnhap.Text).Where
+               (s => s.matkhau == txtmatKhau.Text).FirstOrDefault();
+            if (nguoidung.chucvu == "Admin")
+            {
+                i = 1;
 
+                return true;
+
+            }
+           
+           else if (nguoidung.chucvu =="NV")
+            {
+                i = 2;
+                // this.Hide();
+                return true;
+            }
+            return false;
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if(check()==true)
+            {
+                this.Hide();
+            }
+           
 
-            
         }
 
         private void btnExit_Click(object sender, EventArgs e)

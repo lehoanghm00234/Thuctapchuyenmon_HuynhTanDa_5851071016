@@ -94,10 +94,8 @@ create proc deletekh(
 	@makh nvarchar(50)
 )
 as
-
  begin
  delete khachhang where makh=@makh
-
  end
  --Them tinh trang
  go
@@ -354,3 +352,64 @@ as begin
 delete nguoidung where taikhoan = @taikhoan
 end
 --Test github
+
+--Them hoa don
+go 
+create proc themHoaDon(
+ @mahd varchar(50),
+ @maphieuthue varchar(50),
+ @ngaythuephong varchar(50),
+ @Gia varchar(50),
+ @Soluongngaythue varchar(50),
+ @ngaythanhtoan varchar(50),
+ @tongtien varchar(50),
+ @makh varchar(50),
+ @manv varchar(50)
+)
+as begin
+insert into hoadon values(
+	@mahd,
+	@maphieuthue,
+	@ngaythuephong,
+	@Gia,
+	@Soluongngaythue,
+	@ngaythanhtoan,
+	@tongtien,
+	@makh,
+	@manv
+)
+end
+--Sua hoa don
+go
+create proc suaHoaDon(
+ @mahd varchar(50),
+ @maphieuthue varchar(50),
+ @ngaythuephong varchar(50),
+ @Gia varchar(50),
+ @Soluongngaythue varchar(50),
+ @ngaythanhtoan varchar(50),
+ @tongtien varchar(50),
+ @makh varchar(50),
+ @manv varchar(50)
+)
+as begin
+update hoadon set
+	maphieuthue = @maphieuthue,
+	ngaythuephong = @ngaythuephong,
+	Gia = @Gia,
+	Soluongngaythue = @Soluongngaythue,
+	ngaythanhtoan = @ngaythanhtoan,
+	tongtien = @tongtien,
+	makh = @makh,
+	manv = @manv
+	where mahd = @mahd
+end
+-- Xoa hoa don
+go
+create proc xoaHoaDon(
+	@mahd varchar(50)
+)
+as begin
+delete hoadon where mahd = @mahd
+end
+	

@@ -111,8 +111,20 @@ namespace QLKhachSanVui
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dt.themDatPhong(txtmapd.Text, cbmp.SelectedValue.ToString(), cbkh.SelectedValue.ToString(), dateTimePicker1.CustomFormat, txtSonguoi.Text);
+            dt.themDatPhong(txtmapd.Text, cbmp.SelectedValue.ToString(), cbkh.SelectedValue.ToString(), dateTimePicker1.Text, txtSonguoi.Text);
             FormDatPhong_Load(sender, e);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dataGridView1.CurrentRow.Index;
+            txtmapd.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            cbmp.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            cbkh.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            dateTimePicker1.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            txtSonguoi.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+
         }
         //kích lên trên ô thêm.
     }
