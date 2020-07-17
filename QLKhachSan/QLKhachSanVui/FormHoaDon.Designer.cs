@@ -41,6 +41,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbMaNhanVien = new System.Windows.Forms.ComboBox();
             this.MaNhanVien = new System.Windows.Forms.Label();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbMaKhachHang = new System.Windows.Forms.ComboBox();
             this.MaKhachHang = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
@@ -48,8 +50,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtMahoadon = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,8 +127,9 @@
             // 
             // dtpNgaythanhtoan
             // 
+            this.dtpNgaythanhtoan.CustomFormat = "hh:mm:ss tt dd/mm/yyyy";
             this.dtpNgaythanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dtpNgaythanhtoan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaythanhtoan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaythanhtoan.Location = new System.Drawing.Point(132, 272);
             this.dtpNgaythanhtoan.Name = "dtpNgaythanhtoan";
             this.dtpNgaythanhtoan.Size = new System.Drawing.Size(170, 29);
@@ -215,6 +216,25 @@
             this.MaNhanVien.TabIndex = 68;
             this.MaNhanVien.Text = "Mã Nhân Viên";
             // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(705, 171);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.Size = new System.Drawing.Size(135, 26);
+            this.txtTongTien.TabIndex = 61;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label7.Location = new System.Drawing.Point(617, 173);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 25);
+            this.label7.TabIndex = 60;
+            this.label7.Text = "Tổng tiền";
+            // 
             // cbMaKhachHang
             // 
             this.cbMaKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -278,25 +298,6 @@
             this.label6.Size = new System.Drawing.Size(112, 24);
             this.label6.TabIndex = 59;
             this.label6.Text = "Mã hóa đơn";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(617, 173);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 25);
-            this.label7.TabIndex = 60;
-            this.label7.Text = "Tổng tiền";
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Location = new System.Drawing.Point(705, 171);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(135, 26);
-            this.txtTongTien.TabIndex = 61;
             // 
             // label8
             // 

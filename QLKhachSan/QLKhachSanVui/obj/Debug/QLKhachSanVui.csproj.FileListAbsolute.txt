@@ -135,3 +135,4 @@ E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debu
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.exe
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.pdb
 E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.FormHoaDon.resources
+E:\Git1\Thuctapchuyenmon_HuynhTanDa_5851071016\QLKhachSan\QLKhachSanVui\obj\Debug\QLKhachSanVui.FormThongKeHoaDon.resources

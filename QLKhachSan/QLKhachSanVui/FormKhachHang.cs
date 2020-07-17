@@ -67,5 +67,14 @@ namespace QLKhachSanVui
             txtSodt.Text = gvKhachhang.Rows[i].Cells[6].Value.ToString();
             txtGhichu.Text = gvKhachhang.Rows[i].Cells[7].Value.ToString();
         }
+        public void timkiem(string s)
+        {
+            gvKhachhang.DataSource = dt.seachingKh(s);
+        }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            timkiem(txtTimkiem.Text.Trim());
+        }
     }
 }

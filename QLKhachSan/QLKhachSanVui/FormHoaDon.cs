@@ -22,6 +22,7 @@ namespace QLKhachSanVui
         private void FormThuePhong_Load(object sender, EventArgs e)
 
         {
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dt.hoadons.ToList();
             cmbMaPT.DataSource = dt.phieuthuephongs.ToList();
             cmbMaPT.DisplayMember = "matp";

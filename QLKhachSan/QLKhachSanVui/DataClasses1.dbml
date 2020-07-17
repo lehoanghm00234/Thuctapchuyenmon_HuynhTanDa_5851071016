@@ -260,4 +260,29 @@
     <Parameter Name="mahd" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.seaching" Method="seaching">
+    <Parameter Name="valuaToFind" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="seachingResult">
+      <Column Name="mahd" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="maphieuthue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Soluongngaythue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tongtien" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ngaythanhtoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="makh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.seachingKh" Method="seachingKh">
+    <Parameter Name="valuaToFind" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="seachingKhResult">
+      <Column Name="makh" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tenkh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="gioitinh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ngaysinh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cmnd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ghichu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
