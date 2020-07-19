@@ -119,6 +119,11 @@ namespace QLKhachSanVui
             cbMaNhanVien.Text = dataGridView1.Rows[i].Cells[8].Value.ToString();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
     //Hello word
 }

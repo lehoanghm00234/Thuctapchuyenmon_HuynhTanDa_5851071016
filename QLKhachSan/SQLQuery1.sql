@@ -1,4 +1,4 @@
-create database Quanlykhachsan2
+﻿create database Quanlykhachsan2
 use Quanlykhachsan2
 go
 
@@ -134,7 +134,8 @@ create table chucvu(
 
 go
 
-
+--Proc tìm kiếm
+go
 alter proc seaching 
 	@valuaToFind nvarchar(50)
 as
@@ -143,15 +144,26 @@ select  hd.mahd,hd.maphieuthue,hd.Gia,hd.Soluongngaythue,hd.tongtien,hd.ngaythan
 where ConCat(hd.ngaythanhtoan,hd.ngaythuephong) like  '%' + @valuaToFind + '%' 
 end
 
-
+go
 select  * from hoadon
 
+
+go
 create proc seachingKh 
 	@valuaToFind nvarchar(50)
 as
 begin
 select  kh.makh,kh.tenkh,kh.gioitinh,kh.ngaysinh,kh.cmnd,kh.sdt,kh.diachi,kh.ghichu from khachhang kh
 where ConCat(kh.makh,kh.tenkh) like  '%' + @valuaToFind + '%' 
+end
+
+go
+create proc seachingNv
+	@valuaToFind nvarchar(50)
+as
+begin
+select nv.manv, nv.tennv, nv.gioitinh, nv.ngaysinh, nv.sdt, nv.diachi, nv.luong, nv.machucvu, nv.tongluong from nhanvien nv
+where ConCat(nv.manv, nv.tennv) like  '%' + @valuaToFind + '%' 
 end
 
 

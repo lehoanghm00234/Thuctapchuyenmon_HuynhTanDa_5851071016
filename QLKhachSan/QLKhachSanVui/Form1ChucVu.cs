@@ -57,5 +57,14 @@ namespace QLKhachSanVui
             dt.xoaChucvu(txtMachucvu.Text);
             Form1ChucVu_Load(sender, e);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult thoat = MessageBox.Show("Bạn có thực sự muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

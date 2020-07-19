@@ -118,5 +118,19 @@ namespace QLKhachSanVui
             dt.xoaPhong(txtMaphong.Text);
             FormPhong_Load(sender, e);
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult thoat = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

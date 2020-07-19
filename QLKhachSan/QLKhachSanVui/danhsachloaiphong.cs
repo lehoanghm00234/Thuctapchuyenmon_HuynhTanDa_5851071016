@@ -54,5 +54,14 @@ namespace QLKhachSanVui
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult thoat = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

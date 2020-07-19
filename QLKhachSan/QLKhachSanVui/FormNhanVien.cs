@@ -89,5 +89,33 @@ namespace QLKhachSanVui
             }
           
         }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTongLuong_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult thoat = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        public void timkiem(string s)
+        {
+            dataGridView1.DataSource = dt.seachingNv(s);
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            timkiem(textBox1.Text.Trim());
+        }
     }
 }

@@ -49,26 +49,31 @@
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Name = "label1";
             // 
             // txttenDangnhap
             // 
             resources.ApplyResources(this.txttenDangnhap, "txttenDangnhap");
+            this.txttenDangnhap.ForeColor = System.Drawing.SystemColors.Highlight;
             this.txttenDangnhap.Name = "txttenDangnhap";
             // 
             // txtmatKhau
             // 
             resources.ApplyResources(this.txtmatKhau, "txtmatKhau");
+            this.txtmatKhau.ForeColor = System.Drawing.SystemColors.Highlight;
             this.txtmatKhau.Name = "txtmatKhau";
             // 
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label2.Name = "label2";
             // 
             // btnLogin
             // 
             resources.ApplyResources(this.btnLogin, "btnLogin");
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -76,6 +81,7 @@
             // btnExit
             // 
             resources.ApplyResources(this.btnExit, "btnExit");
+            this.btnExit.ForeColor = System.Drawing.SystemColors.Highlight;
             this.btnExit.Name = "btnExit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);

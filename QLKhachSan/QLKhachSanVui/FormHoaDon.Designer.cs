@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.cbMaNhanVien = new System.Windows.Forms.ComboBox();
             this.MaNhanVien = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
@@ -71,9 +72,8 @@
             this.labGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labGia.Location = new System.Drawing.Point(136, 215);
             this.labGia.Name = "labGia";
-            this.labGia.Size = new System.Drawing.Size(60, 24);
+            this.labGia.Size = new System.Drawing.Size(0, 24);
             this.labGia.TabIndex = 58;
-            this.labGia.Text = "label7";
             // 
             // btnSua
             // 
@@ -130,7 +130,7 @@
             this.dtpNgaythanhtoan.CustomFormat = "hh:mm:ss tt dd/mm/yyyy";
             this.dtpNgaythanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpNgaythanhtoan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgaythanhtoan.Location = new System.Drawing.Point(132, 272);
+            this.dtpNgaythanhtoan.Location = new System.Drawing.Point(127, 273);
             this.dtpNgaythanhtoan.Name = "dtpNgaythanhtoan";
             this.dtpNgaythanhtoan.Size = new System.Drawing.Size(170, 29);
             this.dtpNgaythanhtoan.TabIndex = 43;
@@ -167,6 +167,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.cbMaNhanVien);
             this.groupBox1.Controls.Add(this.MaNhanVien);
             this.groupBox1.Controls.Add(this.txtTongTien);
@@ -189,12 +190,22 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.Location = new System.Drawing.Point(26, 59);
+            this.groupBox1.Location = new System.Drawing.Point(26, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(925, 312);
+            this.groupBox1.Size = new System.Drawing.Size(1133, 346);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa Đơn";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(394, 238);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 63;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cbMaNhanVien
             // 
@@ -229,7 +240,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(617, 173);
+            this.label7.Location = new System.Drawing.Point(594, 170);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 25);
             this.label7.TabIndex = 60;
@@ -406,7 +417,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 649);
+            this.ClientSize = new System.Drawing.Size(1182, 649);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
@@ -459,5 +470,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Button button1;
     }
 }

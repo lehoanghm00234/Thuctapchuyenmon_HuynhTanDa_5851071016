@@ -349,6 +349,20 @@ namespace QLKhachSanVui
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), valuaToFind);
 			return ((ISingleResult<seachingKhResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.seachingNv")]
+		public ISingleResult<seachingNvResult> seachingNv([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string valuaToFind)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), valuaToFind);
+			return ((ISingleResult<seachingNvResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.suaDatPhong")]
+		public int suaDatPhong([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string matp, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string maphong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string makh, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string ngaythue, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string soluong)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), matp, maphong, makh, ngaythue, soluong);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.chucvu")]
@@ -2468,6 +2482,176 @@ namespace QLKhachSanVui
 				if ((this._ghichu != value))
 				{
 					this._ghichu = value;
+				}
+			}
+		}
+	}
+	
+	public partial class seachingNvResult
+	{
+		
+		private string _manv;
+		
+		private string _tennv;
+		
+		private string _gioitinh;
+		
+		private string _ngaysinh;
+		
+		private string _sdt;
+		
+		private string _diachi;
+		
+		private string _luong;
+		
+		private string _machucvu;
+		
+		private string _tongluong;
+		
+		public seachingNvResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_manv", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string manv
+		{
+			get
+			{
+				return this._manv;
+			}
+			set
+			{
+				if ((this._manv != value))
+				{
+					this._manv = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tennv", DbType="VarChar(50)")]
+		public string tennv
+		{
+			get
+			{
+				return this._tennv;
+			}
+			set
+			{
+				if ((this._tennv != value))
+				{
+					this._tennv = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gioitinh", DbType="VarChar(50)")]
+		public string gioitinh
+		{
+			get
+			{
+				return this._gioitinh;
+			}
+			set
+			{
+				if ((this._gioitinh != value))
+				{
+					this._gioitinh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ngaysinh", DbType="VarChar(50)")]
+		public string ngaysinh
+		{
+			get
+			{
+				return this._ngaysinh;
+			}
+			set
+			{
+				if ((this._ngaysinh != value))
+				{
+					this._ngaysinh = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sdt", DbType="VarChar(50)")]
+		public string sdt
+		{
+			get
+			{
+				return this._sdt;
+			}
+			set
+			{
+				if ((this._sdt != value))
+				{
+					this._sdt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_diachi", DbType="VarChar(50)")]
+		public string diachi
+		{
+			get
+			{
+				return this._diachi;
+			}
+			set
+			{
+				if ((this._diachi != value))
+				{
+					this._diachi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_luong", DbType="VarChar(50)")]
+		public string luong
+		{
+			get
+			{
+				return this._luong;
+			}
+			set
+			{
+				if ((this._luong != value))
+				{
+					this._luong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_machucvu", DbType="NVarChar(50)")]
+		public string machucvu
+		{
+			get
+			{
+				return this._machucvu;
+			}
+			set
+			{
+				if ((this._machucvu != value))
+				{
+					this._machucvu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tongluong", DbType="NVarChar(50)")]
+		public string tongluong
+		{
+			get
+			{
+				return this._tongluong;
+			}
+			set
+			{
+				if ((this._tongluong != value))
+				{
+					this._tongluong = value;
 				}
 			}
 		}

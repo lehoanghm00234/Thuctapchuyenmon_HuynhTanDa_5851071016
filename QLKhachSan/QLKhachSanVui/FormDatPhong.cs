@@ -27,7 +27,7 @@ namespace QLKhachSanVui
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dt.phieuthuephongs.ToList();
             cbkh.DataSource = dt.khachhangs.ToList();
-            cbkh.DisplayMember = "tenkh";
+            cbkh.DisplayMember = "makh";
             cbkh.ValueMember = "makh";
 
             cbmp.DataSource = dt.phongs.ToList();
@@ -126,6 +126,22 @@ namespace QLKhachSanVui
 
 
         }
-        //kích lên trên ô thêm.
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult thoat = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dt.suaDatPhong(txtmapd.Text, cbmp.SelectedValue.ToString(), cbkh.SelectedValue.ToString(), dateTimePicker1.Text, txtSonguoi.Text);
+            dataGridView1.DataSource = new DataClasses1DataContext().phieuthuephongs.ToList();
+        }
     }
+        //kích lên trên ô thêm.
+    
 }

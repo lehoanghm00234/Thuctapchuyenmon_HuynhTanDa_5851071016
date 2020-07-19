@@ -53,13 +53,27 @@ namespace QLKhachSanVui
             int i = dataGridView1.CurrentRow.Index;
             txtTaikhoan.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             txtMatkhau.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-           // cbChucvu.SelectedValue = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            txtQuye.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             dt.xoaNguoidung(txtTaikhoan.Text);
             FormNguoiDung_Load(sender, e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult thoat = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void txtQuye_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
