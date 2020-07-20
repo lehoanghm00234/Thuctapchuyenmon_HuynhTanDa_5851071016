@@ -16,7 +16,7 @@ namespace QLKhachSanVui
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1ChucVu());
+            Application.Run(new FormMain());
         }
     }
 }

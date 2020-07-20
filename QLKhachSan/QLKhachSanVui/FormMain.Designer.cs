@@ -50,10 +50,10 @@
             this.mnChucvu = new System.Windows.Forms.ToolStripMenuItem();
             this.mnNguoidung = new System.Windows.Forms.ToolStripMenuItem();
             this.mnBaocao = new System.Windows.Forms.ToolStripMenuItem();
+            this.doanhThuTheoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lblUser = new System.Windows.Forms.Label();
             this.lbllogo = new System.Windows.Forms.Label();
-            this.doanhThuTheoThángToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +91,7 @@
             this.mnDangnhap.ForeColor = System.Drawing.SystemColors.Highlight;
             this.mnDangnhap.Image = ((System.Drawing.Image)(resources.GetObject("mnDangnhap.Image")));
             this.mnDangnhap.Name = "mnDangnhap";
-            this.mnDangnhap.Size = new System.Drawing.Size(224, 28);
+            this.mnDangnhap.Size = new System.Drawing.Size(187, 28);
             this.mnDangnhap.Text = "Đăng nhập";
             this.mnDangnhap.Click += new System.EventHandler(this.mnDangnhap_Click);
             // 
@@ -100,25 +100,25 @@
             this.mnDangxuat.ForeColor = System.Drawing.SystemColors.Highlight;
             this.mnDangxuat.Image = ((System.Drawing.Image)(resources.GetObject("mnDangxuat.Image")));
             this.mnDangxuat.Name = "mnDangxuat";
-            this.mnDangxuat.Size = new System.Drawing.Size(224, 28);
+            this.mnDangxuat.Size = new System.Drawing.Size(187, 28);
             this.mnDangxuat.Text = "Đăng xuất";
             this.mnDangxuat.Click += new System.EventHandler(this.mnDangxuat_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(184, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(184, 6);
             // 
             // mnThoat
             // 
             this.mnThoat.ForeColor = System.Drawing.SystemColors.Highlight;
             this.mnThoat.Name = "mnThoat";
-            this.mnThoat.Size = new System.Drawing.Size(224, 28);
+            this.mnThoat.Size = new System.Drawing.Size(187, 28);
             this.mnThoat.Text = "Thoát";
             this.mnThoat.Click += new System.EventHandler(this.mnThoat_Click);
             // 
@@ -190,7 +190,7 @@
             this.mnPhong.Enabled = false;
             this.mnPhong.ForeColor = System.Drawing.SystemColors.Highlight;
             this.mnPhong.Name = "mnPhong";
-            this.mnPhong.Size = new System.Drawing.Size(224, 28);
+            this.mnPhong.Size = new System.Drawing.Size(194, 28);
             this.mnPhong.Text = "Phòng";
             this.mnPhong.Click += new System.EventHandler(this.mnPhong_Click);
             // 
@@ -219,7 +219,7 @@
             this.mnChucvu});
             this.mnNhanvien.ForeColor = System.Drawing.SystemColors.Highlight;
             this.mnNhanvien.Name = "mnNhanvien";
-            this.mnNhanvien.Size = new System.Drawing.Size(224, 28);
+            this.mnNhanvien.Size = new System.Drawing.Size(194, 28);
             this.mnNhanvien.Text = "Nhân viên";
             this.mnNhanvien.Click += new System.EventHandler(this.mnNhanvien_Click);
             // 
@@ -227,7 +227,7 @@
             // 
             this.mnChucvu.ForeColor = System.Drawing.SystemColors.Highlight;
             this.mnChucvu.Name = "mnChucvu";
-            this.mnChucvu.Size = new System.Drawing.Size(224, 28);
+            this.mnChucvu.Size = new System.Drawing.Size(164, 28);
             this.mnChucvu.Text = "Chức vụ";
             this.mnChucvu.Click += new System.EventHandler(this.chứcVụToolStripMenuItem_Click);
             // 
@@ -235,7 +235,7 @@
             // 
             this.mnNguoidung.ForeColor = System.Drawing.SystemColors.Highlight;
             this.mnNguoidung.Name = "mnNguoidung";
-            this.mnNguoidung.Size = new System.Drawing.Size(224, 28);
+            this.mnNguoidung.Size = new System.Drawing.Size(194, 28);
             this.mnNguoidung.Text = "Người dùng";
             this.mnNguoidung.Click += new System.EventHandler(this.mnNguoidung_Click);
             // 
@@ -248,6 +248,14 @@
             this.mnBaocao.Size = new System.Drawing.Size(93, 28);
             this.mnBaocao.Text = "Báo cáo";
             this.mnBaocao.Click += new System.EventHandler(this.mnBaocao_Click);
+            // 
+            // doanhThuTheoThángToolStripMenuItem
+            // 
+            this.doanhThuTheoThángToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.doanhThuTheoThángToolStripMenuItem.Name = "doanhThuTheoThángToolStripMenuItem";
+            this.doanhThuTheoThángToolStripMenuItem.Size = new System.Drawing.Size(275, 28);
+            this.doanhThuTheoThángToolStripMenuItem.Text = "Doanh thu theo tháng";
+            this.doanhThuTheoThángToolStripMenuItem.Click += new System.EventHandler(this.doanhThuTheoThángToolStripMenuItem_Click);
             // 
             // imageList1
             // 
@@ -278,13 +286,6 @@
             this.lbllogo.TabIndex = 7;
             this.lbllogo.Text = "QUẢN LÝ KHÁCH SẠN";
             this.lbllogo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // doanhThuTheoThángToolStripMenuItem
-            // 
-            this.doanhThuTheoThángToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.doanhThuTheoThángToolStripMenuItem.Name = "doanhThuTheoThángToolStripMenuItem";
-            this.doanhThuTheoThángToolStripMenuItem.Size = new System.Drawing.Size(275, 28);
-            this.doanhThuTheoThángToolStripMenuItem.Text = "Doanh thu theo tháng";
             // 
             // FormMain
             // 

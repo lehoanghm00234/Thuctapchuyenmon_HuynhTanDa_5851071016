@@ -179,7 +179,7 @@ namespace QLKhachSanVui
 
         private void mnBaocao_Click(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void chứcVụToolStripMenuItem_Click(object sender, EventArgs e)
@@ -198,6 +198,12 @@ namespace QLKhachSanVui
         {
             Tinhtrang tinhtrang = new Tinhtrang();
             tinhtrang.ShowDialog();
+        }
+
+        private void doanhThuTheoThángToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormThongKeHoaDon formThongKeHoaDon = new FormThongKeHoaDon();
+            formThongKeHoaDon.ShowDialog();
         }
     }
 }

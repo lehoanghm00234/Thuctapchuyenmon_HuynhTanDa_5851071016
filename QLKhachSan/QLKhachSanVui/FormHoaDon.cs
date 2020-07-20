@@ -122,8 +122,57 @@ namespace QLKhachSanVui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult thoat = MessageBox.Show("B?n có mu?n thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (thoat == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            app.Visible = true;
+            // Dua du lieu vao excel
+            worksheet.Cells[1, 7] = "HÓA ĐƠN ";
+            //worksheet.Cells[2, 7] = "tổng tiền " + txtTongTien.Text;
+
+
+            worksheet.Cells[3, 4] = "STT";
+            worksheet.Cells[3, 5] = "Mã Hóa Đơn";
+            worksheet.Cells[3, 6] = "Mã phiếu thuê";
+            worksheet.Cells[3, 7] = "Ngày thuê phòng";
+            worksheet.Cells[3, 8] = "Giá tiền";
+            worksheet.Cells[3, 9] = "Số ngày thuê";
+            worksheet.Cells[3, 10] = "Ngày trả phòng";
+            worksheet.Cells[3, 11] = "Tổng tiền";
+            worksheet.Cells[3, 12] = "Mã khách hàng";
+            worksheet.Cells[3, 13] = "Mã nhân viên";
+            
+            
+
+            for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    worksheet.Cells[i + 4, 4] = i + 1;
+                    worksheet.Cells[i + 4, j + 5] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+        }
+        public void timkiem(string s)
+        {
+            dataGridView1.DataSource = dt.seachingHD(s);
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            timkiem(textBox1.Text.Trim());
         }
     }
+
     //Hello word
 }

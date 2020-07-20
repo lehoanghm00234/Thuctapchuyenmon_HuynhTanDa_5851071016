@@ -307,4 +307,18 @@
     <Parameter Name="soluong" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.seachingHD" Method="seachingHD">
+    <Parameter Name="valuaToFind" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="seachingHDResult">
+      <Column Name="mahd" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="maphieuthue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ngaythuephong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Soluongngaythue" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ngaythanhtoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tongtien" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="makh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="manv" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

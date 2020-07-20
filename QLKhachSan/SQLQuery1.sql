@@ -166,6 +166,15 @@ select nv.manv, nv.tennv, nv.gioitinh, nv.ngaysinh, nv.sdt, nv.diachi, nv.luong,
 where ConCat(nv.manv, nv.tennv) like  '%' + @valuaToFind + '%' 
 end
 
+go
+create proc seachingHD
+	@valuaToFind nvarchar(50)
+as
+begin
+select hd.mahd, hd.maphieuthue, hd.ngaythuephong, hd.Gia, hd.Soluongngaythue, hd.ngaythanhtoan, hd.tongtien, hd.makh, hd.manv from hoadon hd
+where ConCat(hd.mahd, hd.makh) like  '%' + @valuaToFind + '%' 
+end
+
 
 
 
