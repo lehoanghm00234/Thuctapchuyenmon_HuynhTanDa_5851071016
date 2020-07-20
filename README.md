@@ -32,7 +32,8 @@
 1. Mở file .exe và làm theo hướng dẫn README.txt.
 2. Run chương trình.
 3. Đăng nhập với tài khoản "da" và mật khẩu "123". (quyền:Nhân viên).
-4. Bắt đầu sử dụng và thao tác nhập liệu với các tính năng của chương trình.
-5. Sau khi sử dụng xong,click ĐĂNG XUẤT để thoát quyền đăng nhập, click THOÁT để thoát chương trình.
+4. Đăng nhập với tài khoản "da1" và mật khẩu "123". (quyền:Admin).
+5. Bắt đầu sử dụng và thao tác nhập liệu với các tính năng của chương trình.
+6. Sau khi sử dụng xong,click ĐĂNG XUẤT để thoát quyền đăng nhập, click THOÁT để thoát chương trình.
 
 Xin cám ơn!
