@@ -1,8 +1,8 @@
 # THỰC TẬP CHUYÊN MÔN NĂM HỌC 2019-2020
-Họ tên: HUỲNH TẤN ĐA
-Mã sinh viên: 5851071016
-Lớp: Công nghệ thông tin K58.
-Đề tài: Quản lý khách sạn
+- Họ tên: HUỲNH TẤN ĐA
+- Mã sinh viên: 5851071016
+- Lớp: Công nghệ thông tin K58.
+- Đề tài: Quản lý khách sạn
 
 ## Phần 1: Công nghệ sử dụng
 - Visual Studio 2019
